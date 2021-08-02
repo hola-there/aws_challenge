@@ -22,133 +22,129 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://aws.amazon.com/free/">
+    <img src="images/logo.png" alt="Logo" width="500">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
-
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
-  </p>
-</p>
-
-
-
-<!-- TABLE OF CONTENTS -->
+  <h1 align="center">AWS Challenge</h1>
+  <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
+    <li><a href="#goal">Goal</a></li>
+    <li><a href="#expectations">Expectations</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#challenge">Challenge</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#launch-ec2-instance">Launch EC2 Instance</a></li>
+        <li><a href="#web-service-powershell-script">Web Service Powershell Script</a></li>
+        <li><a href="#s3-bucket">S3 Bucket</a></li>
+        <li><a href="#lambda-automation">Lambda Automation</a></li>
+        <li><a href="#completion-testing">Completion Testing</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#built-with">Built With</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
+</p>
 
+<!-- Goal for Challenge -->
+## Goal:
+The goal of this challenge is to create a **“Hello World”** web service that is automatically updated using AWS Lambda
 
+<!-- Expectations for Challenge -->
+## Expectations:
+It is likely that you have never used some of the technologies needed to complete this challenge. That is
+OK! You can use any resources at your disposal to complete the challenge and learn these new
+technologies. Full completion of the project is encouraged but not required. The purpose of the
+challenge is to expose you to common problems that you will experience as a DevOps Engineer and
+gauge your ability to troubleshoot those issues as well as your ability to learn new technologies.
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+<!-- Cloning for Challenge -->
+### Getting Started
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+1. Clone the repo
+2. Follow the Instructions and Document as much as you want
+3. Add any bells and whistles that you'd like to add
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+<!-- Challenge Summary & Steps -->
+## Challenge:
+> To complete this challenge, you will need to sign up for a free AWS account:
+https://aws.amazon.com/free/. <br> Ensure you are using “free tier” options for all of the services during
+this challenge
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+#### Launch EC2 Instance:
+- [ ] For your web service, you will launch an EC2 instance from the AWS gallery. Please use
+**Microsoft Windows Server 2012 R2 Base image** with size _**t2.micro**_.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+#### Web Service Powershell Script:
+- [ ] On the newly launched EC2 instance, write a powershell script that does the following:
+  1. Installs IIS
+      - [ ] Done?
+  2. Create a simple “Hello World” website that runs in IIS
+      - [ ] Done?
+  3. Home directory for website should be C:\ANCILE
+      - [ ] Done?
+  4. Everything running on HTTP port 80 is fine for this challenge and website doesn’t need to be visible outside of the VM itself
+      - [ ] Done?
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+#### S3 Bucket:
+1. Create new S3 Bucket with public read access
+      - [ ] Done?
+2. Enable Static Website Hosting on S3 bucket with index.html as the index document.
+      - [ ] Done?
+3. Upload a test index.html file to the S3 bucket
+      - [ ] Done?
+4. Update IIS “Hello World” website to display the contents of the S3 website
+      - [ ] Done?
+
+#### Lambda Automation:
+1. Create a Python AWS Lambda function that writes the current time to the index.html inside
+of the S3 bucket created above. In turn, the web service IIS website should show the
+current time each time the Lambda function is run.
+    - [ ] Done?
+  * Choose “Create new role from template(s)
+    - [ ] Done?
+      * Select “S3 object read-only permissions from Policy templates drop down
+        - [ ] Done?
+          * In AWS IAM under “Roles” select role you just created
+            - [ ] Done?
+              * Attach polices “AmazonS3FullAccess” (you will need this to be able to write to the S3 bucket
+                - [ ] Done?
+
+#### Completion Testing:
+1. When you are done, you should be able to run a Lambda function which automatically updates
+index.html inside of S3, which in turn displays current time on the IIS Website.
+2. The website should look like this:
+[![Example Screen Shot][example-screenshot]](#)
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+<p align="center">
+This section lists major frameworks/tools/software that will be used in this specific challenge<br>
+<img src="https://p2zk82o7hr3yb6ge7gzxx4ki-wpengine.netdna-ssl.com/wp-content/uploads/aws-free-tier.png" width="100" height="100"><img src="https://mdbcdn.b-cdn.net/img/Marketing/general/logo/big/mdb.png" height="100"><img src="https://cdn.shopify.com/s/files/1/0855/1446/products/Microsoft_Windows_Server_2012_R2_Standard_1024x1024.png?v=1623383879" width="100">
+<img src="https://docs.signalfx.com/en/latest/_images/integration_microsoftiis.png" width="100">
+<img src="https://rapidapi.com/blog/wp-content/uploads/2018/06/logo-2582748_640.png" width="100">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png" width="100">
+<img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_640.png" width="100">
+</p>
+<br>
 
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
+* [AWS Services/Free Tier](https://aws.amazon.com/free)
+* [Fluent Design for Bootstrap 4](https://github.com/mdbootstrap/bootstrap-fluent-design)
+* [Microsoft Windows Server 2012 R2 Base image](https://aws.amazon.com/windows/products/ec2/server2012r2/)
+* [Microsoft IIS](https://www.iis.net/)
+* [HTML 5](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [JavaScript](https://www.javascript.com/)
+* [CSS 3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -161,23 +157,17 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Ola B. - [@olabamisaiye](https://twitter.com/olabamisaiye) - contact@olabamisaiye.me
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
+Challenge Link: [https://github.com/hola-there/aws_challenge](https://github.com/hola-there/aws_challenge)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
@@ -193,22 +183,18 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 * [JVectorMap](http://jvectormap.com)
 * [Font Awesome](https://fontawesome.com)
 
-
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/hola-there/aws_challenge.svg?style=for-the-badge
+[contributors-url]: https://github.com/hola-there/aws_challenge/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/hola-there/aws_challenge.svg?style=for-the-badge
+[forks-url]: https://github.com/hola-there/aws_challenge/network/members
+[stars-shield]: https://img.shields.io/github/stars/hola-there/aws_challenge.svg?style=for-the-badge
+[stars-url]: https://github.com/hola-there/aws_challenge/stargazers
+[issues-shield]: https://img.shields.io/github/issues/hola-there/aws_challenge.svg?style=for-the-badge
+[issues-url]: https://github.com/hola-there/aws_challenge/issues
+[license-shield]: https://img.shields.io/github/license/hola-there/aws_challenge.svg?style=for-the-badge
+[license-url]: https://github.com/hola-there/aws_challenge/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://www.linkedin.com/in/ola-bamisaiye/
+[example-screenshot]: images/screenshot.png
