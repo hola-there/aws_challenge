@@ -1,5 +1,19 @@
-"dependencies": {
-   "design-dependency": "mdbootstrap/bootstrap-fluent-design", # try 1
-   "design-dependency": "git://github.com/mdbootstrap/bootstrap-fluent-design.git#0.0.1", # try 2
-   "design-dependency": "git://github.com/mdbootstrap/bootstrap-fluent-design.git", # try 3...
+{
+  "name": "bootstrap_fluent_design",
+  "description": "Design files needed for the index.html site to operate & look as planned",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdbootstrap/bootstrap-fluent-design.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdbootstrap/bootstrap-fluent-design/issues"
+  },
+  "homepage": "https://github.com/mdbootstrap/bootstrap-fluent-design"
 }
