@@ -9,7 +9,7 @@ env:
   git-crendential-helper: yes
 
 phases:
-  pre-build::
+  pre_build::
     commands:
       # Add the "machine user's" ssh key and activate it - this allows us to get private (sub) repositories
       - git submodule init
