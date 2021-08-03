@@ -1,0 +1,3 @@
+[submodule "bootstrap-fluent-design"]
+	path = bootstrap-fluent-design
+	url = https://github.com/mdbootstrap/bootstrap-fluent-design
