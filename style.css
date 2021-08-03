@@ -6,6 +6,15 @@
   height: 18rem;
 }
 
+.flip-clock-wrapper {
+    text-align: center;
+    /* position: relative; */
+    /* width: 100%; */
+    display: inline-block;
+    width: auto;
+    margin: 2% auto;
+}
+
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 3.5rem;

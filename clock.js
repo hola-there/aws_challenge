@@ -4,5 +4,5 @@ $(document).ready(function() {
   });
   clock.stop();
   // need to provide the value from the lambda here
-  // clock.setFaceValue(value);
+  // clock.setFaceValue(lambda_value_here);
 });
