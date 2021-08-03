@@ -1,0 +1,16 @@
+# This example buildspec will enable submodules for CodeBuild projects that are both
+# triggered directly and via CodePipeline
+#
+# This buildspec is designed with help from Stack Overflow:
+# https://stackoverflow.com/questions/42712542/how-to-auto-deploying-git-repositories-with-submodules-on-aws
+version: 0.2  # Always use version 2
+
+env:
+  git-crendential-helper: yes
+
+phases:
+  pre-build::
+    commands:
+      # Add the "machine user's" ssh key and activate it - this allows us to get private (sub) repositories
+      - git submodule init
+      - git submodule update --recursive
