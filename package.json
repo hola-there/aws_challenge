@@ -1,0 +1,5 @@
+"dependencies": {
+   "design-dependency": "mdbootstrap/bootstrap-fluent-design", # try 1
+   "design-dependency": "git://github.com/mdbootstrap/bootstrap-fluent-design.git#0.0.1", # try 2
+   "design-dependency": "git://github.com/mdbootstrap/bootstrap-fluent-design.git", # try 3...
+}
