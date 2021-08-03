@@ -135,6 +135,7 @@ This section lists major frameworks/tools/software that will be used in this spe
 <img src="https://rapidapi.com/blog/wp-content/uploads/2018/06/logo-2582748_640.png" width="100">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png" width="100">
 <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_640.png" width="100">
+<img src="https://itservices.usc.edu/files/2020/04/Duo-Icon.png" width="100">
 </p>
 <br>
 
@@ -145,6 +146,7 @@ This section lists major frameworks/tools/software that will be used in this spe
 * [HTML 5](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [JavaScript](https://www.javascript.com/)
 * [CSS 3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [MFA through DUO](https://duo.com/)
 
 <!-- CONTRIBUTING -->
 ## Contributing
