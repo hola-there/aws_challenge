@@ -1,3 +1,6 @@
 [submodule "bootstrap-fluent-design"]
 	path = bootstrap-fluent-design
 	url = https://github.com/mdbootstrap/bootstrap-fluent-design
+[submodule "FlipClock"]
+	path = FlipClock
+	url = https://github.com/objectivehtml/FlipClock
