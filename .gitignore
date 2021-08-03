@@ -2,3 +2,5 @@
 *.ppk
 *_accessKeys.csv
 *.rdp
+bootstrap-fluent-design/
+FlipClock/
